@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+* {   
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+a{
+        text-decoration: none;
+
+}
+
+.scroll-top i{
+    color: var(--main-color);
+    width: 30px;
+    height: 30px;
+    font-size: 35px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.scroll-top i:hover{
+    transform: rotate(270deg);
+}
+body {
+    background-color: var(--bg);
+    font-family: 'Roboto';
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+header {
+    height: 70px;
+    border-bottom: 1px solid white;
+    position: fixed;
+    background-color: var(--bg);
+    width: 100%;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo img {
+    width: 60px;
+
+
+}
+
+
+
+header .container ul {
+    display: flex;
+}
+
+header .container ul li a, header .container .links i {
+    color: white;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+header .container ul li a:hover{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+/* start hero ( the body section ) */
+
+section{
+    padding-top: 2rem;
+    padding-bottom: 2rem ;
+}
+.hero {
+    color: white;
+    height: 100vh;
+    background-image: url(../images/home-img.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.hero .text h1 { 
+    font-size: 50px;
+}
+
+.hero .text p {
+    font-size: 20px;
+    margin: 15px 0;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.hero .text {
+    width: 50%;
+}
+
+.button {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 10px;
+    transition: 0.3s;
+    border: none;
+}
+
+.button:hover {
+    letter-spacing: 2px;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.about .container .aboutusimage , .aboutustext{
+    flex-basis: 50%;
+}
+
+.about .container .aboutusimage img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.about .container .aboutustext {
+    color: white;
+    padding: 20px;
+    background-color: var(--black);
+}
+.about .container .aboutustext h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about .container .aboutustext p{
+    font-weight: 300;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.main-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.main-title span{
+    color: var(--main-color)
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+.our-menu .container .menu{
+    text-align: center;
+    border: var(--border);
+    padding: 20px 0;
+    transition: 0.3s;
+}
+.container .menu h1,h2{
+    color: white;
+    
+}
+
+.our-menu .container {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+
+.our-menu .container .menu h2{
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.our-menu .container .menu h1{
+    margin-top: 15px;
+}
+
+.our-menu .container .menu:hover{
+    background-color: white;
+}
+
+.our-menu .container .menu:hover h1{
+    color: black;
+    
+}
+
+.our-menu .container .menu:hover h2{
+    color: black;
+}
+
+.our-menu .container .menu:hover .button{
+    color: black;
+}
+
+
+.our-products .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+
+.our-products .container .product{
+    border: var(--border);
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.our-products .container .icons{
+
+    margin-bottom: 20px;
+}
+
+.our-products .container .icons i{
+    border: var(--border);
+    padding: 10px;
+    margin: 5px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.our-products .container .icons i:hover{
+    background-color: var(--main-color);   
+    cursor: pointer;
+}
+
+.our-products .container .product img{
+    margin-bottom: 20px;
+
+}
+
+.our-products .container .review{
+    margin: 20px;
+    color: var(--main-color);
+}
+
+.our-products .container .price span{
+    font-size: 30px;
+}
+
+.our-products .container .price s{
+    font-size: 15px;
+}
+
+
+.customer-review .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+
+.customer-review .container .co-reviews{
+    border: var(--border);
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+
+.customer-review .container p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.customer-review .container .reviews-star i{
+    color: var(--main-color);
+}
+
+.customer-review .container h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.customer-review .container .co-reviews > img{
+    border-radius: 50%;
+    width: 100px;
+
+}
+
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+.contact .container .location , .contact .container .info {
+    flex-basis: 50%;
+}
+
+.contact .container .info {
+    background-color: var(--black);
+    padding: 30px;
+    text-align: center;
+}
+.contact .container .info h1{
+    color: white;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+.contact .container .info form div{
+    background-color: var(--bg);
+    border: var(--border);
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+}
+.contact .container .info form input{
+    background-color: transparent ;
+    border: none;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    
+}
+.contact .container .info form input:focus{
+    border: none;
+    outline: none;
+    caret-color: white;
+}
+
+.contact .container .info form i{
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.contact .container .info form input::placeholder{
+    color: rgb(102, 97, 97);
+}
+
+
+.contact .container .info form input[type="submit"]{
+    background-color: var(--main-color) !important;
+    cursor: pointer;
+}
+
+.blog .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+
+.blog .container .blog-post {
+    border: var(--border);
+    
+}
+
+.blog .container .blog-post .blog-info {
+    padding: 20px;
+}
+
+.blog .container .blog-post .blog-info h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.blog .container .blog-post .blog-info p{
+    color: white;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.blog .container .blog-post .image{
+    overflow: hidden;
+}
+
+.blog .container .blog-post .image img{
+    transition: 500ms;
+}
+.blog .container .blog-post .image:hover img{
+    transform:scale(1.2);
+
+}
+
+
+footer {
+    background-color: var(--black);
+
+}
+
+footer .container .social-media{
+    display: flex;
+    justify-content: center;
+    
+}
+
+footer .container .social-media i {
+    border: var(--border);
+    color: white;
+    padding: 10px;
+    border-radius: 50%; /* bach yji mdawar */
+    margin: 20px 10px;
+}
+
+footer .container .social-media i:hover{
+    background-color: var(--main-color);   
+    cursor: pointer;
+}
+
+footer .container .footer-menu {
+    display: flex; 
+    justify-content: center;
+}
+
+footer .container .footer-menu li{
+    padding: 10px 20px;
+    border: var(--border);
+    margin: 20px 10px;
+}
+
+footer .container .footer-menu li a{
+    color: white
+}
+
+footer .container .footer-menu li:hover {
+    background-color: var(--main-color);   
+    cursor: pointer;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+} 
+
+footer p span{
+    color: var(--main-color);
+}
